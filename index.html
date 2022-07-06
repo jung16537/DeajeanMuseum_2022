@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전시립박물관</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="common.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script>
+    <script src="common.js"></script>
+    <script>
+        // 어느정도 스크롤 시 메뉴바 배경 나타나며 상단고정
+        $(function () {
+            function navigo() {
+                const header = document.querySelector('.hd');
+                const headerheight = $('.hd').clientHeight;
+                document.addEventListener('scroll', onScroll, {
+                    passive: true
+                });
+
+                function onScroll() {
+                    const scrollposition = pageYOffset;
+                    const hd = document.querySelector('.hd');
+                    if (headerheight <= scrollposition) {
+                        hd.classList.add('.down')
+                    } else {
+                        hd.classList.remove('.down');
+                    }
+                }
+            }
+            navigo()
+        })
+    </script>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="inner">
+            <h1><img src="./01_img/logo1_w_최종.png" alt="박물관logo"></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">박물관이용</a>
+                        <ul class="sub">
+                            <li><a href="#">관람안내</a></li>
+                            <li><a href="#">시설안내</a></li>
+                            <li><a href="#">예약안내</a></li>
+                            <li><a href="#">시설대관안내</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">전시</a>
+                        <ul class="sub">
+                            <li><a href="#">상설전시</a></li>
+                            <li><a href="#">특별전시</a></li>
+                            <li><a href="#">야외전시</a></li>
+                            <li><a href="#">대전근현대 사전시관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">교육</a>
+                        <ul class="sub">
+                            <li><a href="#">교육안내</a></li>
+                            <li><a href="#">교육신청</a></li>
+                            <li><a href="#">교육자료</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">유물정보</a>
+                        <ul class="sub">
+                            <li><a href="#">소장유물 안내</a></li>
+                            <li><a href="#">유물기증 &#183; 기탁</a></li>
+                            <li><a href="#">소장 유물 열람</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">자료마당</a>
+                        <ul class="sub">
+                            <li><a href="#">대전의 역사</a></li>
+                            <li><a href="#">대전의 문화재</a></li>
+                            <li><a href="#">자료이용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">열린공간</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">포토갤러리</a></li>
+                            <li><a href="#">질문과답변</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="mo_menu">
+                    <span>대전선사박물관</span>
+                    <span>대전광역시청</span>
+                </div>
+                <p><img src="./01_img/logo2_w.png" alt="대전광역시logo"></p>
+            </nav>
+            <div class="top_menu">
+                <a href="#">로그인</a>
+                <a href="#">HOME</a>
+                <i class="fa-regular fa-magnifying-glass"></i>
+            </div>
+            <div class="ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <section class="sec1">
+        <div class="inner">
+            <h2>
+                <span>대전 시립 박물관</span>
+                <p>대전의 역사와 문화를 선사문화부터 <br>
+                    근&#183;현대까지 한눈에 살펴보아요
+                </p>
+            </h2>
+            <div class="icon_con">
+                <ul class="icon">
+                    <li>
+                        <div><img src="./01_img/icon_관람2_B.png" alt="관람안내"></div>
+                        <span>관람안내</span>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/icon_교육3_B.png" alt="교육안내"></div>
+                        <span>교육안내</span>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/icon_예약2_B.png" alt="예약안내"></div>
+                        <span>예약안내</span>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/icon_대관2_B.png" alt="대관안내"></div>
+                        <span>대관이용안내</span>
+                    </li>
+                </ul>
+                <p>
+                    <i class="fa-light fa-clock"></i>
+                    관람시간 10:00 ~ 19:00(30분전까지 입장가능) 매주 월요일 휴관
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="sec2">
+        <div class="inner">
+            <h2>
+                특별전시
+            </h2>
+            <div class="tap_menu">
+                <span class="on">특별전시</span>
+                <span>교육</span>
+            </div>
+            <div class="list_con">
+                <button class="btn">자세히보기</button>
+                <ul class="list_sp on">
+                    <li>
+                        <div class="img">
+                            <a href="#">자세히보기</a>
+                            <img src="./01_img/poster_special_01__.jpg" alt="특별전시1">
+                        </div>
+                        <div class="txt_con1">
+                            <span>진행중</span>
+                            <strong>단오</strong>
+                            <p><strong>기간</strong> <span>2022-05-25 ~ 2022-06-28</span></p>
+                            <p><strong>장소</strong> <span>장설전시 내</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a href="#">자세히보기</a>
+                            <img src="./01_img/poster_special_02_.jpg" alt="특별전시2">
+                        </div>
+                        <div class="txt_con1">
+                            <span>진행중</span>
+                            <strong>'수산정원, 고산구곡'</strong>
+                            <p><strong>기간</strong> <span>2021-12-23 ~ 2022-05-29</span></p>
+                            <p><strong>장소</strong> <span>기획전시실2</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img">
+                            <a href="#">자세히보기</a>
+                            <img src="./01_img/poster_special_03.jpg" alt="특별전시3">
+                        </div>
+                        <div class="txt_con1">
+                            <span>진행중</span>
+                            <strong>'산성을 지켜라! 꼬마장수!'</strong>
+                            <p><strong>기간</strong> <span>2021-12-23 ~ 2022-06-26</span></p>
+                            <p><strong>장소</strong> <span>대전시립박물관 B동 1층</span></p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list_edu">
+                    <li>
+                        <div class="img">
+                            <a href="#">자세히보기</a>
+                            <img src="./01_img/poster_education.jpg" alt="교육">
+                        </div>
+                        <div class="txt_con1">
+                            <span>진행중</span>
+                            <strong>옛 사람들의 여행</strong>
+                            <p><strong>기간</strong> <span>2022-05-12 ~ 2022-06-07</span></p>
+                            <p><strong>장소</strong> <span>데전시립박물관 A동 세미나실</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="sec3">
+        <div class="inner">
+            <h2>
+                <span>살기좋은 도시,</span>
+                <p>대전의 역사와 문화를 <br>
+                    대전시립박물관에서 관람하세요
+                </p>
+            </h2>
+        </div>
+    </section>
+    <section class="sec4">
+        <div class="inner">
+            <button class="btn">자세히보기</button>
+            <h2>
+                <span>상시전시</span>
+                <p>그동안 알지 못했던 대전의 옛 모습을 볼 수 있습니다</p>
+            </h2>
+            <div class="slide_con">
+                <ul class="slide">
+                    <li>
+                        <div><img src="./01_img/slide_01.png" alt="슬라이드이미지"></div>
+                        <div class="txt_con2">
+                            <a href="#">자세히보기</a>
+                            <span>대전의 여명, 선사와 고대문화</span>
+                            <p>구석기시대 도구를 이용한 사람의 흔적부터 통일신라시대 대전을 지킨 산성과 보루까지 전시했습니다.
+                                유성 용계동에 소재한 원삼국시대 작은 마을 유적을 디오라마로 복원하였으며, 대전의 땅속에서 출토된 고고 유물을 폭넓게 감상할 수 있습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/slide_02.png" alt="슬라이드이미지"></div>
+                        <div class="txt_con2">
+                            <a href="#">자세히보기</a>
+                            <span>고려, 예술의 발달과 사회의 문화</span>
+                            <p>유성 상대동 고려 마을에서 출토된 다채로운 유물과 유성현 관아의 실체를 증명하는 기와를 전시하였습니다. 고려를 장식한 구완동에서 생산된 고려청자와 대전의 도자기
+                                가마 분포도 감상할 수 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/slide_03.png" alt="슬라이드이미지"></div>
+                        <div class="txt_con2">
+                            <a href="#">자세히보기</a>
+                            <span>근대, 격동의 시대와 삶의 기억</span>
+                            <p>국권 수호를 위한 위정척사운동, 애국계몽운동과 3·1만세운동을 전시하였습니다. 일제강점기 행정구역의 변천과 경부선 철도의 부설, 충남도청의 이전이 근대 대전에
+                                어떤 영향을 미쳤는지 관람할 수 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/slide_04.png" alt="슬라이드이미지"></div>
+                        <div class="txt_con2">
+                            <a href="#">자세히보기</a>
+                            <span>조선, 대전 선비 문화</span>
+                            <p>조선이 건국된 후 행정구역이 바뀌면서 세워진 관청과 학교, 조선후기 정치와 사상을 주도한 호서사림에 대한 전시를 하였습니다. 남간정사(南澗精舍)와
+                                동춘당(同春堂) 등 대전 사대부의 고택문화, 대전에서 출토된 의복들을 감상할 수 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div><img src="./01_img/slide_05.png" alt="슬라이드이미지"></div>
+                        <div class="txt_con2">
+                            <a href="#">자세히보기</a>
+                            <span>대전의 역사와 문화 공간에 담다</span>
+                            <p>천혜의 터 한밭, 그 터에 시간이 만든 수많은 문화유산들이 한 공간에 모였습니다. 대전은 예로부터 편평한 들판과 둔덕이 길게 뻗어있고, 하천이 가로지르는 살기
+                                좋은 공간으로 영원히 대를 이어가며 살만한 곳이었습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="dot_con edu_dot">
+                <span class="dot1 on">1</span>
+                <span class="dot2">2</span>
+                <span class="dot3">3</span>
+                <span class="dot4">4</span>
+                <span class="dot5">5</span>
+            </div>
+        </div>
+    </section>
+    <section class="sec5">
+        <div class="inner">
+            <h2>공지사항</h2>
+            <div class="noti_con">
+                <button class="btn">자세히보기</button>
+                <ul class="slide_noti">
+                    <li>
+                        <span>공지</span>
+                        <strong>스탬프 찾아 떠나는 박물관 미술관 여행-기념품 소진 안내</strong>
+                        <p>관람객 여러분의 성원에 힘입어 &lt;스탬프 찾아 떠나는 박물관 미술관 여행&gt; 기념품이 모두 소진되었습니다.
+                            재정비 후 7월 중 기념품 증정을 재개할 예정이며, 재개 시 홈페이지 및 SNS에 공지됩니다.
+                            (스탬프북은 추가 제공되지 않습니다)</p>
+                        <span>2022-05-25</span>
+                        <a href="#">더보기 ></a>
+                    </li>
+                    <li>
+                        <span>공지</span>
+                        <strong>2022년 6월 운영안내</strong>
+                        <p>※ 6월 1일(수) 지방선거일, 6월 6일(월) 현충일 정상 개관합니다</p>
+                        <p>※ 6월 7일(화) 박물관 대체휴일로 휴관합니다</p>
+                        <span>2022-05-25</span>
+                        <a href="#">더보기 ></a>
+                    </li>
+                    <li>
+                        <span>공지</span>
+                        <strong>대전근현대사전시관 관람시간 변경 안내(2022.5.15.일요일)</strong>
+                        <p>옛 충남도청사 전기공사에 따른 건물 정전에 따라 대전근현대사전시관 운영 시간을 아래와 같이 변경하오니 착오없으시기 바랍니다.
+                            - 변경시간 : 2022년 5월 15일(일) 오후 2시부터 관람 가능
+                            - 변경사유 : 옛 충남도청사 전기공사에 따른 건물 정전</p>
+                        <span>2022-05-12</span>
+                        <a href="#">더보기 ></a>
+                    </li>
+                    <li>
+                        <span>공지</span>
+                        <strong>2022 박물관미술관주간 뮤지엄꾹 운영 안내(5. 13. 금~5. 22. 일)</strong>
+                        <p>2022년 박물관미술관주간을 맞이하여 대전시립박물관이 <스탬프투어 뮤지엄꾹>을 진행합니다.
+
+                                행사1. 스탬프꾹!
+                                대전시립박물관을 방문해 숨겨진 스탬프를 찾는 보물찾기 프로그램입니다
+                                스탬프 적립 개수에 따라 다양한 선물을 드려요!
+
+                                행사2. 스탬프꾸!
+                                AR필터와 인스타그램 스토리 꾸미기 콘테스트를 개최합니다.
+                                박물관에 설치된 AR필터 인식 포스터를 촬영하여 개성있게 스토리를 꾸며주세요!</p>
+                        <span>2022-05-12</span>
+                        <a href="#">더보기 ></a>
+                    </li>
+                </ul>
+                <div class="dot_con noti_dot">
+                    <span class="on">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="popup_con">
+                <div>
+                    <p class="img2"><img src="./01_img/popup_icon01.png" alt=""></p>
+                    <span>대전시립박물관 360VR</span>
+                    <p>
+                        집에서도 현장에 있는 것 처럼 즐길 수 있어요 <br>
+                        대전시립박물관 상설전시를 360VR로 관람하세요~
+                    </p>
+                    <button class="btn2">자세히보기</button>
+                </div>
+                <div>
+                    <p class="img2"><img src="./01_img/popup_icon02.png" alt=""></p>
+                    <span>근현대사전시관 360VR</span>
+                    <p>
+                        집에서도 현장에 있는 것 처럼 즐길 수 있어요 <br>
+                        근현대사전시관 상설전시를 360VR로 관람하세요~
+                    </p>
+                    <button class="btn2">자세히보기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">영상정보처리기기 운영,관리방침</a></li>
+                <li><a href="#">홈페이지 개선의견</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <div>
+                <h4><img src="./01_img/logo2_w.png" alt="대전광역시 로고"></h4>
+                <p>(35242) 대전광역시 유성구 도안대로 398 / 대표전화 (042) 270-8600</p>
+                <p>COPYRIGHT 2017 (c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
